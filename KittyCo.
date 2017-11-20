@@ -1,0 +1,184 @@
+#!/bin/bash
+echo hello what is your name?
+read NAME
+echo How old are you?
+read age
+if [ "$age" -gt 5 ] 
+then 
+	echo Welcome $NAME
+else 
+       	echo you are too young to play this game
+	exit
+fi
+echo You are welcome to Kitty Co.
+echo At Kitty Co. you take care of kitties and when someone orders them you will send the cat to them.
+echo Do you want a job at Kitty Co.
+answer=""
+while [ "$answer" = "" ]
+do
+   read answer
+   case "$answer" in 
+     yes)
+	echo Great! then we can snuggle kitties togther and send them of to their owners.      
+	;;
+     no)
+        echo oh ok 
+        exit   
+	;;
+     *)
+       echo  please answer yes or no 	 
+       answer=""	
+       ;; 
+   esac
+done
+echo Now to get started with your job
+echo Here is your kitten take care of it or you must be fired so be careful 
+echo so $NAME, I Will just get cat food you stay here and take care of the cat 
+echo Here is the cat bowl and water 
+echo oh i almost forgot, you get to give the cat a nickname 
+echo what do what to call  it?
+read CATNAME 
+echo Thats a great name
+sleep 3
+echo -5 MINUTES LATER-
+echo Heres the cat food -gives cat food-
+echo Are you hungry?
+answer=""
+while [ "$answer" = "" ]
+do
+    read answer
+    case "$answer" in
+	yes)
+        	echo here you go -you eat the food-
+		;;
+	no)
+		echo -you play with the kitties for hours then day and night later you die of starvation
+		exit
+		;;
+	*)
+		echo please answer yes or no
+		answer=""
+		;;
+    esac
+done
+echo Its nearly 3:00 so get your stuff ready to leave and tomorrow I will come pick you up ok $NAME 
+sleep 10 
+echo $NAME, $NAME, $NAME!!!!!!!!!!!!!!!!!
+answer=""
+while [ "$answer" = "" ]
+do 
+    read answer
+    case "$answer" in
+    yes)
+               echo Its time for work now
+               ;;
+   what)
+               echo Its time for work
+               ;;
+    *)
+               echo Please answer what or yes
+               answer=""
+               ;;
+esac
+done
+
+echo today is the day you give $CATNAME to its owner you also get to meet the owner
+echo you will be intoduced to them
+echo -bell rings-Oh that will be them now 
+sleep 4
+echo so $NAME this is Jack you guys can have a chat Ill go get the cat supplies
+echo Type bye when you are ready
+answer=""
+until [ "$answer" = "bye" ]
+do 
+     read answer
+done
+
+echo Im back
+echo so Jack here is the cat and their stuff $NAME you can now say your goodbyes to $CATNAME 
+echo "{Jack}" What?
+echo oh yeah we give the kitten a nick name that we call it until it a gets its name
+echo "{Jack}" Oh ok I thought you already named it 
+echo Jack maybe you could keep the nickname
+echo"{Jack}" ok sounds like a good idea
+echo ok Bye Jack
+echo ok $NAME heres your next cat, what are you going to name this one?
+read CATNAME
+echo Thats a great one
+echo now
+echo what do you want to do
+answer=""
+while [ "$answer" = ""] 
+do 
+        read answer
+        case "$answer" in
+       feed $CATNAME )
+              echo"{you}"lets feed $CATNAME
+              ;; 
+       give $CATNAME water)
+              echo "{you}" lets give $CATNAME water
+              ;;
+          *)
+              echo please answer give $catname water or feed $catname
+              answer=""
+              ;;
+esac
+done
+echo so do you want anything to eat?
+answer=""
+while [ "$answer" = ""] 
+do
+      read answer 
+      case "$answer" in
+
+
+      yes)
+      echo ok here you go -gives-
+     ;;
+
+     no)
+      echo-you play with the kitties for hours then day and night later you die of starvation
+      ;;
+
+     *)
+      echo please answer yes or no
+      answer=""
+      ;;
+
+esac
+done
+echo its 2:00 one more hour until your shift is over
+echo what do you want to do?
+answer=""
+while [ "$answer" = ""] 
+do
+       read answer
+       case "$answer" in 
+
+        feed $catname )
+         echo"{you}" how about we feed $catname
+         ;;
+
+
+        give $catname water )
+           echo"{you}" Lets give $catname some water
+           ;;
+
+
+        play with $CATNAME )
+         echo "{you}" Lets play with $catname and give them some yarn
+         ;;
+
+
+        *)
+          echo please answer play with $catname , give $catname water or feed $CATNAME
+          ;;
+ 
+
+esac 
+done
+echo Its 3:00 ill drive you home
+sleep 3
+echo $NAME its time for work
+sleep 5 
+        
