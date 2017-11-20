@@ -64,6 +64,7 @@ done
 echo Its nearly 3:00 so get your stuff ready to leave and tomorrow I will come pick you up ok $NAME 
 sleep 10 
 echo $NAME, $NAME, $NAME!!!!!!!!!!!!!!!!!
+echo please answer yes or what
 answer=""
 while [ "$answer" = "" ]
 do 
@@ -100,7 +101,7 @@ echo "{Jack}" What?
 echo oh yeah we give the kitten a nick name that we call it until it a gets its name
 echo "{Jack}" Oh ok I thought you already named it 
 echo Jack maybe you could keep the nickname
-echo"{Jack}" ok sounds like a good idea
+echo "{Jack}" ok sounds like a good idea
 echo ok Bye Jack
 echo ok $NAME heres your next cat, what are you going to name this one?
 read CATNAME
@@ -108,14 +109,14 @@ echo Thats a great one
 echo now
 echo what do you want to do
 answer=""
-while [ "$answer" = ""] 
+while [ "$answer" = "" ] 
 do 
         read answer
         case "$answer" in
-       feed $CATNAME )
-              echo"{you}"lets feed $CATNAME
+       "feed $CATNAME")
+              echo "{you}"lets feed $CATNAME
               ;; 
-       give $CATNAME water)
+       "give $CATNAME water")
               echo "{you}" lets give $CATNAME water
               ;;
           *)
@@ -126,7 +127,7 @@ esac
 done
 echo so do you want anything to eat?
 answer=""
-while [ "$answer" = ""] 
+while [ "$answer" = "" ] 
 do
       read answer 
       case "$answer" in
@@ -150,22 +151,22 @@ done
 echo its 2:00 one more hour until your shift is over
 echo what do you want to do?
 answer=""
-while [ "$answer" = ""] 
+while [ "$answer" = "" ] 
 do
        read answer
        case "$answer" in 
 
-        feed $catname )
+        "feed $catname")
          echo"{you}" how about we feed $catname
          ;;
 
 
-        give $catname water )
+        "give $catname water" )
            echo"{you}" Lets give $catname some water
            ;;
 
 
-        play with $CATNAME )
+       "play with $CATNAME" )
          echo "{you}" Lets play with $catname and give them some yarn
          ;;
 
@@ -180,5 +181,5 @@ done
 echo Its 3:00 ill drive you home
 sleep 3
 echo $NAME its time for work
-sleep 5 
+sleep 2 
         
