@@ -1,0 +1,13 @@
+#!/bin/bash 
+echo Hello whats your name?  
+read NAME
+echo One more question, how old are you
+read AGE
+if [ $AGE gt 5 ]
+then
+  echo Welcome to MyJob
+else
+   echo sorry your to young to play this game
+   exit
+fi
+echo 
